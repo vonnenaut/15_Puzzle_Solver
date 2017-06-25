@@ -1,10 +1,7 @@
 """
-Loyd's Fifteen puzzle - solver and visualizer
+Loyd's Fifteen puzzle solver
 Note that solved configuration has the blank (zero) tile in upper left
-Use the arrows key to swap this tile with its neighbors
 """
-# import poc_fifteen_gui
-
 class Puzzle:
     """
     Class representation for the Fifteen puzzle
@@ -413,8 +410,7 @@ class Puzzle:
         """
         Solve the tile in row zero at the specified column
         Updates puzzle and returns a move string
-        """    
-        # assert ?           
+        """          
         clone = self.clone()
         clone.update_target_tile(0, target_col)
         clone.get_zero_pos()
