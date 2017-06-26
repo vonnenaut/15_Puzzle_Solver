@@ -374,8 +374,6 @@ class Puzzle:
             for col in range(target_col, self.get_width()):
                 if self.current_position(row, col) != (row, col) and (row, col) != self.get_zero_pos():
                     invariant2 = False
-
-        # print "invariant1: %s, invariant2: %s" % (invariant1, invariant2)
         if invariant1 and invariant2:
             return True
         return False
